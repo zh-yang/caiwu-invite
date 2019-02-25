@@ -16,7 +16,7 @@ module.exports = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
       sourceMap: true,
-      usePostCSS: false,
+      usePostCSS: true,
       extract: true  
     })
   },

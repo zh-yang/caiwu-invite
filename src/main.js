@@ -4,7 +4,8 @@ import router from './router'
 
 // Vue.config.productionTip = false
 
-import '@/styles/main.scss'
+import flexible_css from './lib/flexible_css.debug'
+import flexible from './lib/flexible'
 
 new Vue({
 	el: '#app',
