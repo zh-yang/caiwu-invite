@@ -1,0 +1,15 @@
+.invite {
+    color: green;
+    font-size: 0.75rem;
+}
+#test {
+    width: 3.75rem;
+    height: 1.0rem;
+    background-image: url('../assets/images/hot2.png');
+    background-color: $color-warning;
+}
+.wrap {
+    display: flex;
+    box-shadow: 1px 1px 1px #aaa;
+    transition: transform 1s;
+}

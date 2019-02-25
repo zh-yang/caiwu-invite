@@ -1,0 +1,67 @@
+//position
+.pos-r {
+    position: relative;
+}
+
+.pos-a {
+    position: absolute;
+}
+
+.pos-f {
+    position: fixed;
+}
+
+//width&height
+.w-100 {
+    width: 100px;
+}
+
+//margin&padding
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+//layout
+.text-center {
+  text-align: center;
+}
+
+.text-overflow {
+  @include text-overflow;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.middle-align {
+  vertical-align: middle;
+}
+
+//float
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+//display
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}

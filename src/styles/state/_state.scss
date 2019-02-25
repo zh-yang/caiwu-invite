@@ -1,0 +1,35 @@
+//cussor
+.cussor-hand {
+    cursor: pointer !important;
+}
+
+.cussor-arrow {
+    cursor: default !important;
+}
+
+.link {
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.no-decoration {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+//state
+.no-transition {
+  transition: none;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
