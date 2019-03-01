@@ -1,0 +1,52 @@
+.invite-transfer {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: white;
+    text-align: center;
+    img {
+        display: block;
+    }
+    .backdrop {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.65;
+        background: #000;
+    }
+    .share-guide {
+        position: fixed;
+        z-index: 3;
+        width: 4.94rem;
+        height: 2.26rem;
+        top: 0.2rem;
+        right: 0.25rem;
+    }
+    .icon-success {
+        width: 1.21rem;
+        height: 1.21rem;
+        margin: 2.95rem auto 0;
+    }
+    .topic {
+        margin: 0.3rem 0 0.2rem;
+        font-size: 0.38rem;
+        color: rgb(68,197,83);
+    }
+    .intro {
+        font-size: 0.26rem;
+        color: $color-disable;
+    }
+    .btn-browser {
+        width: 2.7rem;
+        height: 0.6rem;
+        margin: 0.8rem auto 0;
+        border: 1px solid rgba(68,197,83,0.5);
+        border-radius: 0.1rem;
+        font-size: 0.3rem;
+        line-height: 0.6rem;
+        color: rgb(68,197,83);
+    }
+}    

@@ -32,7 +32,8 @@ module.exports = merge(baseWebpackConf, {
             rewrites: [
                 { from: /.*/, to: path.posix.join('/', 'index.html') }
             ]
-        }
+        },
+        proxy: config.dev.proxyTable
     },
     plugins: [
         new webpack.DefinePlugin({

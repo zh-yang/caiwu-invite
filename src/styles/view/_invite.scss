@@ -1,15 +1,207 @@
-.invite {
-    color: green;
-    font-size: 0.75rem;
-}
-#test {
-    width: 3.75rem;
-    height: 1.0rem;
-    background-image: url('../assets/images/hot2.png');
-    background-color: $color-warning;
-}
-.wrap {
-    display: flex;
-    box-shadow: 1px 1px 1px #aaa;
-    transition: transform 1s;
+.invite-act {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: rgb(26,12,109);
+    .weui-toast_text {
+        width: 6rem;
+    }
+    img {
+        display: block;
+    }
+    .backdrop {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.65;
+        background: #000;
+    }
+    .act-rule {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 1.8rem;
+        width: 1.15rem;
+        height: 0.35rem;
+        border-radius: 0.175rem 0 0 0.175rem;
+        text-align: right;
+        background: rgb(21,10,75);
+        color: white;
+        line-height: 0.35rem;
+        font-size: 0.24rem;
+    }
+    .rule-list {
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        left: 0;
+        top: 1.45rem;
+        height: 6.25rem;
+        .wrap {
+            position: relative;
+            width: 6.8rem;
+            height: 100%;
+            margin: 0 auto;
+            border-radius: 0.1rem;
+            padding: 0.4rem;
+            background: #fff;
+            .close {
+                position: absolute;
+                width: 0.43rem;
+                height: 0.43rem;
+                right: 0.2rem;
+                top: 0.35rem;
+            }
+            p {
+            margin-bottom: 0.3rem;    
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.34rem;
+            color: rgb(250,99,99);
+            
+        }
+        ul {
+            font-size: 0.22rem;
+            text-align: justify;
+            line-height: 1.7;
+        }
+        }
+    }
+    .share-guide {
+        position: fixed;
+        z-index: 3;
+        width: 4.94rem;
+        height: 2.26rem;
+        top: 0.2rem;
+        right: 0.25rem;
+    }
+    .banner {
+        width: 7.5rem;
+        height: 5.78rem;
+        background: url("../assets/images/invite/banner.png");
+        background-size: 100%;
+        .topic {
+            top: 1.4rem;
+            left: 0;
+            width: 100%;
+            font-size: 0.28rem;
+            color: white;
+            span {
+                color: yellow;
+            }
+        }
+    }
+    .act-panel {
+        width: 7.0rem;
+        margin: 0 auto;
+        border-radius: 0.1rem;
+        background: white;
+        font-size: 0.28rem;
+        .title {
+            width: 2.3rem;
+            height: 0.82rem;
+            margin: 0 auto;
+            padding: 0.18rem 0 0.15rem;
+        }
+        .intro {
+            color: $blue;
+        }
+        &.panel-1 {
+            height: 5.4rem;
+            margin-top: -1.35rem;
+            .panel-bg {
+                width: 6.26rem;
+                height: 3.79rem;
+                margin: 0.25rem auto 0;
+                padding-right: 0.25rem;
+                background: url("../assets/images/invite/bg_panel1.png");
+                background-size: 100%;
+                .topic {
+                    padding-top: 0.55rem;
+                    color: rgb(175,143,103);
+                }
+                .price-present {
+                    margin-top: 0.4rem;
+                    font-size: 1.0rem;
+                    color: red;
+                    span {
+                        font-size: 0.43rem;
+                    }
+                }
+                .price-original {
+                    margin-top: 0.15rem;
+                    color: $color-disable;
+                    text-decoration: line-through;
+                }
+                .remake {
+                    margin-top: 0.65rem;
+                    color: white;
+                }
+            }
+        }
+        &.panel-2 {
+            height: 5.5rem;
+            margin-top: 0.28rem;
+            margin-bottom: 1.45rem;
+            .wrap {
+                display: flex;
+                flex-direction: column;
+                width: 6.6rem;
+                height: 3.5rem;
+                margin: 0.25rem auto 0;
+                .list {
+                    display: flex;
+                    li:nth-child(1) {
+                        width: 1.6rem;
+                        text-align: center;
+                    }
+                    li:nth-child(2) {
+                        width: 3.0rem;
+                        padding-left: 0.6rem;
+                        color: red;
+                    }
+                    li:nth-child(3) {
+                        width: 2.0rem;
+                        text-align: center;
+                        color: red;
+                    }
+                    .double {
+                        font-size: 0.24rem;
+                        line-height: 0.34rem;
+                    }
+                }
+                >li {
+                    flex-grow: 0.2;
+                    line-height: 0.7rem;
+                    &:nth-child(odd) {
+                        background: rgb(237,243,253);
+                    }
+                    &:nth-child(1)>.list>li {
+                        color: $blue;
+                    }
+                }
+                
+            }
+            .corner {
+                bottom: -0.25rem;
+                left: -0.25rem;
+                width: 0.89rem;
+                height: 1.32rem;
+            }
+        }
+    }
+    .btn-invite {
+        bottom: 0;
+        left: 0;
+        width: 7.5rem;
+        height: 0.9rem;
+        background: rgb(254,189,23);
+        line-height: 0.9rem;
+        font-size: 0.36rem;
+        color: white;
+    }
+
 }

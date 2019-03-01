@@ -27,15 +27,19 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "vue-loader": "^13.7.3",
+    "vue-loader": "^11.1.4",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.7",
+    "vux-loader": "^1.2.9",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.3",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
     "vue": "^2.6.7",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "vux": "^2.9.2",
+    "zepto": "^1.2.0"
   }
 }

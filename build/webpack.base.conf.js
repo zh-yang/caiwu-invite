@@ -2,8 +2,9 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var vueLoaderConfig = require('./vue-loader.conf')
+var vuxLoader = require('vux-loader')
 
-module.exports = {
+var webpackConfig = {
     entry: {
         main: './src/main.js'
     },
@@ -11,8 +12,7 @@ module.exports = {
         path: config.build.assetsRoot,
         filename: '[name].js',
         publicPath: process.env.NODE_ENV === 'production' ?
-            config.build.assetsPublicPath :
-            config.dev.assetsPublicPath
+            config.build.assetsPublicPath : config.dev.assetsPublicPath
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -24,13 +24,12 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.vue$/,
-                use: 'vue-loader',
-                // options: vueLoaderConfig
+                use: 'vue-loader'
             },
             {
-            	test: /\.js$/,
-            	use: 'babel-loader',
-            	include: path.resolve(__dirname, '../src')
+                test: /\.js$/,
+                use: 'babel-loader',
+                include: path.resolve(__dirname, '../src')
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -51,3 +50,7 @@ module.exports = {
         ]
     }
 }
+
+// module.exports = vuxLoader.merge(webpackConfig, { plugins: ['vux-ui'] })
+
+module.exports = webpackConfig
