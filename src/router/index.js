@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Invite from '@/components/Invite'
 import Bind from '@/components/Bind'
 import Transfer from '@/components/Transfer'
+import Pure from '@/components/Pure'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
             path: '/mobile/transfer',
             name: 'Transfer',
             component: Transfer
+        },
+        {
+            path: '/mobile/pure',
+            name: 'Pure',
+            component: Pure
         }
 	]
 })

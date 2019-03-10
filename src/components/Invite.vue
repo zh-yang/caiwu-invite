@@ -7,7 +7,7 @@
                 <p>邀请规则</p>
                 <img @click="toogleActRule(false)" src="../assets/images/invite/close.png" alt="" class="close">
                 <ul>
-                    <li>1、邀请人每成功邀请1位好友，即可获得333元现金奖励，以此类推，多邀多得；成功邀请2位及以上好友，可支持提现（含第1位奖励），提现支付宝；</li>
+                    <li>1、邀请人每成功邀请1位好友，即可获得333元现金奖励，以此类推，多邀多得；成功邀请2位及以上好友，可支持提现，提现支付宝；</li>
                     <li>2、被邀请好友必须是新用户（从未付费订购过全能财务的用户），否则视为无效邀请；</li>
                     <li>3、如果被邀请好友订购后申请了退款，则平台会扣除此部分返利；</li>
                     <li>4、邀请成功后您可获得相应的现金奖励；申请提现请从电脑端登录全能财务并绑定支付宝账号，奖励将直接发放到您绑定的支付宝账号内；</li>
@@ -20,7 +20,7 @@
         <div class="page-wrap">
             <div class="banner pos-r">
                 <p class="topic text-center pos-a">
-                    限时优惠<span>666元</span>邀请 <span>2人</span>免费试用
+                    限时优惠<span>666元/年</span>&nbsp;&nbsp;邀请<span>2人</span>免费用
                 </p>
             </div>
             <div class="act-panel panel-1 text-center pos-r">
@@ -31,7 +31,7 @@
                     <p class="price-present">
                         <span>￥</span>666<span>/全年</span>
                     </p>
-                    <p class="price-original">原价：999</p>
+                    <p class="price-original">原价：999元</p>
                     <p class="remake">内测期间 不限订单量</p>
                 </div>
             </div>
@@ -131,7 +131,7 @@ export default {
               // alert(JSON.stringify(data))
               if (data) {
                 wx.config({
-                  debug: true,
+                  //debug: true,
                   appId: data.data.appId, // 必填，公众号的唯一标识
                   timestamp: data.data.timestamp, // 必填，生成签名的时间戳 Date.parse(new Date())
                   nonceStr: data.data.nonceStr, // 必填，生成签名的随机串

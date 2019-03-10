@@ -2,62 +2,35 @@
     <div class="invite-bind">
         <div id="toast" class="pos-f text-center">{{toastText}}</div>
         <div class="wrap">
-            <div class="banner pos-r">
-                <p class="topic text-center pos-a">
-                    只需一个财务<span>1/6</span>的月薪 为您服务<span>一年</span>
-                </p>
+            <div class="banner">
             </div>
-            <div class="act-panel panel-1 text-center pos-r">
-                <ul class="wrap">
-                    <li>
-                        <img src="../assets/images/inviteBind/panel1 (2).png" alt="">
-                        <p>成本</p>
-                        <p>算不准</p>
-                    </li>
-                    <li>
-                        <img src="../assets/images/inviteBind/panel1 (3).png" alt="">
-                        <p>报表</p>
-                        <p>看不懂</p>
-                    </li>
-                    <li>
-                        <img src="../assets/images/inviteBind/panel1 (4).png" alt="">
-                        <p>现金流</p>
-                        <p>无预警</p>
-                    </li>
-                    <li>
-                        <img src="../assets/images/inviteBind/panel1 (1).png" alt="">
-                        <p>软件</p>
-                        <p>不靠谱</p>
-                    </li>
-                </ul>
+            <div class="act-panel panel-1">
             </div>
-            <img class="arrow" src="../assets/images/inviteBind/arrow.png">
-            <p class="topic text-center">我们轻松帮您解决以上问题</p>
             <div class="act-panel panel-2">
-                <img src="../assets/images/inviteBind/panel2.png">
             </div>
-            <div class="wechat-code">
-                <img src="../assets/images/inviteBind/wechat-code.png" alt="" class="code">
-                <ul>
-                    <li class="font-34">添加客服微信</li>
-                    <li class="font-22">参与全能财务内测！</li>
-                    <li class="font-20">长按识别二维码</li>
-                </ul>
+            <div class="act-panel panel-3">
             </div>
-
-
+            <div class="act-panel panel-4">
+            </div>
+            <div class="act-panel panel-5">
+            </div>
+            <div class="act-panel panel-6">
+            </div>
+            <div class="act-panel panel-7 text-center">
+              <div class="corner">内测版福利</div>
+              <p class="intro">￥<span class="font-bold">666元</span>/年<span class="font-weak">（原价:￥<span class="font-through">999</span>）</span> <span class="font-red">邀请2人返全额现金</span></p>
+              <input class="wangwang-input text-center" type="text" v-model="targetSellerNick" placeholder="请输入您的旺旺昵称">
+              <p class="topic">
+                来自好友
+                <span class="name">{{nickName}}</span>
+                的邀请
+              </p>
+              <div class="btn-bind" @click="bindInvite()">抢内测优惠（限量）</div>
+            </div>
+            <img class="act-panel panel-8" src="../assets/images/inviteBind/panel8.png">
+            </img>
         </div>
-        <div class="module-bind text-center pos-f">
-            <p class="topic">
-                <img src="../assets/images/inviteBind/icon-left.png" alt="" class="icon-left">
-                {{nickName}} 邀请您内测啦
-                <img src="../assets/images/inviteBind/icon-right.png" alt="" class="icon-right">
-            </p>
-            <p class="intro">限时优惠<span class="bold">666元/年</span> （原价999） <span>邀请2人免费用</span></p>
-            <input class="wangwang-input text-center" type="text" v-model="targetSellerNick" placeholder="输入您的旺旺昵称即可体验">
-            <div class="btn-bind" @click="bindInvite()">马上体验</div>
-            <img src="../assets/images/inviteBind/corner.png" alt="" class="corner pos-a">
-        </div>
+        <div id="scroll-bottom" class="pos-f"></div>
     </div>
 </template>
 <script>
@@ -151,7 +124,7 @@ export default {
               // alert(JSON.stringify(data))
               if (data) {
                 wx.config({
-                  debug: true,
+                  //debug: true,
                   appId: data.data.appId, // 必填，公众号的唯一标识
                   timestamp: data.data.timestamp, // 必填，生成签名的时间戳 Date.parse(new Date())
                   nonceStr: data.data.nonceStr, // 必填，生成签名的随机串
@@ -204,6 +177,29 @@ export default {
       },
       mounted() {
         document.querySelector('head title').innerText = '网店财务管理，首选全能财务，只需一个财务1/6的月薪，为您服务一年！';
+
+        var $scrollBottom = $('#scroll-bottom');
+        var height = document.getElementsByTagName('BODY')[0].scrollHeight;
+        var c_height = document.documentElement.clientHeight;
+        $(window).scroll(function () {
+          var timer;
+          if(timer){
+            clearTimeout(timer);
+          }
+            timer = setTimeout(function(){
+              if ($(window).scrollTop() > (height -c_height - 200)) {
+                $scrollBottom.fadeOut(1000);
+            } else {
+                $scrollBottom.fadeIn(1000);
+            }
+            },500);
+        });
+
+        $scrollBottom.click(function(){
+          // $(document).scrollTop(height -c_height);
+          $('html,body').animate({scrollTop:(height -c_height)});
+        });
+
       }
 }
 </script>
