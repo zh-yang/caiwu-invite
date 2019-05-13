@@ -32,7 +32,7 @@
                         <span>￥</span>666<span>/全年</span>
                     </p>
                     <p class="price-original">原价：999元</p>
-                    <p class="remake">内测期间 不限订单量</p>
+                    <p class="remake">不限订单量</p>
                 </div>
             </div>
             <div class="act-panel panel-2 pos-r">
@@ -144,7 +144,7 @@ export default {
                       desc: '这款软件精准计算网店利润，数据报表可视化，自动同步直通车/钻展数据，更可一键批量操作成本、库存！快来一起体验！',
                       img_width: 640,
                       img_height: 640,
-                      link: 'http://www.quannengcaiwu.com/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                      link: 'http://caiwu.cuxiao.quannengzhanggui.net/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                       imgUrl: 'https://wxllb.image.alimmdn.com/qnzg_material/bab4a7d0-b39a-4ce7-8ffe-1bcad634c024', // 分享图标
                       success: function (e) {
                         _this.toogleShareGuide(false);
@@ -157,7 +157,7 @@ export default {
                       title: '网店财务管理，首选全能财务，只需一个财务1/6的月薪，为您服务一年！', // 分享标题
                       img_width: 640,
                       img_height: 640,
-                      link: 'http://www.quannengcaiwu.com/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                      link: 'http://caiwu.cuxiao.quannengzhanggui.net/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                       imgUrl: 'https://wxllb.image.alimmdn.com/qnzg_material/bab4a7d0-b39a-4ce7-8ffe-1bcad634c024', // 分享图标
                       success: function (e) {
                         _this.toogleShareGuide(false);

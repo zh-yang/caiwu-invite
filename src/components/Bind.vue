@@ -17,7 +17,7 @@
             <div class="act-panel panel-6">
             </div>
             <div class="act-panel panel-7 text-center">
-              <div class="corner">内测版福利</div>
+              <div class="corner">升级版福利</div>
               <p class="intro">￥<span class="font-bold">666元</span>/年<span class="font-weak">（原价:￥<span class="font-through">999</span>）</span> <span class="font-red">邀请2人返全额现金</span></p>
               <input class="wangwang-input text-center" type="text" v-model="targetSellerNick" placeholder="请输入您的旺旺昵称">
               <p class="topic">
@@ -25,10 +25,9 @@
                 <span class="name">{{nickName}}</span>
                 的邀请
               </p>
-              <div class="btn-bind" @click="bindInvite()">抢内测优惠（限量）</div>
+              <div class="btn-bind" @click="bindInvite()">抢优惠福利（限量）</div>
             </div>
             <img class="act-panel panel-8" src="../assets/images/inviteBind/panel8.png">
-            </img>
         </div>
         <div id="scroll-bottom" class="pos-f"></div>
     </div>
@@ -137,7 +136,7 @@ export default {
                       desc: '这款软件精准计算网店利润，数据报表可视化，自动同步直通车/钻展数据，更可一键批量操作成本、库存！快来一起体验！',
                       img_width: 640,
                       img_height: 640,
-                      link: 'http://www.quannengcaiwu.com/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                      link: 'http://caiwu.cuxiao.quannengzhanggui.net/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                       imgUrl: 'https://wxllb.image.alimmdn.com/qnzg_material/bab4a7d0-b39a-4ce7-8ffe-1bcad634c024', // 分享图标
                       success: function (e) {
                       },
@@ -149,7 +148,7 @@ export default {
                       title: '网店财务管理，首选全能财务，只需一个财务1/6的月薪，为您服务一年！', // 分享标题
                       img_width: 640,
                       img_height: 640,
-                      link: 'http://www.quannengcaiwu.com/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                      link: 'http://caiwu.cuxiao.quannengzhanggui.net/mobile/bind?inviteNo='+_this.inviteNo+"&nick=" + encodeURI(_this.nick), // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                       imgUrl: 'https://wxllb.image.alimmdn.com/qnzg_material/bab4a7d0-b39a-4ce7-8ffe-1bcad634c024', // 分享图标
                       success: function (e) {
                       },

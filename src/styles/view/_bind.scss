@@ -57,8 +57,9 @@
             background-image: url("../assets/images/inviteBind/panel2.png");
         }
         &.panel-3 {
-            height: 5.18rem;
+            height: 5.17rem;
             margin-top: 0.2rem;
+            border: 0.01rem solid rgb(35, 13, 126);
             background-image: url("../assets/images/inviteBind/panel3.png");
         }
         &.panel-4 {
@@ -141,9 +142,9 @@
     #scroll-bottom {
         z-index: 1;
         bottom: 0.2rem;
-        left: 0.08;
-        width: 7.34rem;
-        height: 1.12rem;
+        left: 0.03rem;
+        width: 7.42rem;
+        height: 1.06rem;
         background: url("../assets/images/inviteBind/button.png");
         background-size: 100%;
     }
